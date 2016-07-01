@@ -1,4 +1,4 @@
-FROM logstash
+FROM logstash:latest
 
 MAINTAINER Philip Schmid <philip.schmid@ins.hsr.ch>
 
@@ -11,4 +11,4 @@ EXPOSE 9995/udp
 
 RUN /opt/logstash/bin/plugin install  --no-verify logstash-codec-netflow
 
-CMD ["/opt/logstash/bin/logstash -f /srv/logstash.conf"]
+CMD ["-f /srv/logstash.conf"]
