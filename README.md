@@ -1,6 +1,7 @@
 # docker-logstash-netflow
 
 ## Run container
+
 ```
-docker run --rm -e "TZ=Europe/Zurich" pschmid/docker-logstash-netflow
+docker run -it --rm -e "TZ=Europe/Zurich" pschmid/docker-logstash-netflow
 ```
