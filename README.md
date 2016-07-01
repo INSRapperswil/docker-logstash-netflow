@@ -3,7 +3,7 @@
 ## Run container
 To start the conainer use:
 ```
-docker run -it --rm -e "TZ=Europe/Zurich" -p 9995:9995/udp pschmid/docker-logstash-netflow logstash -f /srv/logstash.conf
+docker run -it --rm -e "TZ=Europe/Zurich" -v /opt/netflow-data:/data -p 9995:9995/udp pschmid/docker-logstash-netflow logstash -f /srv/logstash.conf
 ```
 
 For own configuration:
