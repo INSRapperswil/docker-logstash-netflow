@@ -10,5 +10,3 @@ RUN curl -Lo /srv/logstash.conf https://raw.githubusercontent.com/PhilipSchmid/d
 EXPOSE 9995:9995/udp
 
 RUN /opt/logstash/bin/plugin install  --no-verify logstash-codec-netflow
-
-CMD ["-f /srv/logstash.conf"]
