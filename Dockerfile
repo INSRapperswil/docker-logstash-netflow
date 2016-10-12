@@ -1,6 +1,6 @@
 FROM logstash:latest
 
-MAINTAINER Philip Schmid <philip.schmid@ins.hsr.ch>
+MAINTAINER Philip Schmid <docker@ins.hsr.ch>
 
 ENV DEBIAN_FRONTEND noninteractive
 
