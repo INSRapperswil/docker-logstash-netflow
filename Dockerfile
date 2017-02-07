@@ -11,4 +11,4 @@ RUN apt-get update \
   && apt-get autoremove \
   && apt-get autoclean
 
-RUN /opt/logstash/bin/logstash-plugin install --no-verify logstash-codec-netflow
+RUN /usr/share/logstash/bin/logstash-plugin install --no-verify logstash-codec-netflow
