@@ -1,8 +1,8 @@
 # Dockerized Logstash with installed Netflow Plugin
 
-This Docker image can be used to collect Netflow data using Logstash. The default configuration of this image just outputs the received flows and also stores them inside a file.
+This Docker image can be used to collect Netflow data using Logstash. In the default configuration of this image, you will be able to store Netflow entries in JSON files. Additionally it prints the received flows to STDOUT (needs to be enabled first). Further Netflow processing logic can be easily configured inside the `logstash.conf` configuration.
 
-Pull the image directly from [pschmid/docker-logstash-netflow](https://hub.docker.com/r/pschmid/docker-logstash-netflow/) using the required version tag.
+Pull the image directly from [pschmid/docker-logstash-netflow](https://hub.docker.com/r/pschmid/docker-logstash-netflow/) using the desired version or simply use the `latest` tag.
 
 ## Prerequisites
 - Create a data directory which will be mounted to the Docker container and will be used to store the Netflow data dump file. By default this image uses the host directory `/opt/netflow-data` which will be mounted at `/data` inside the container.
