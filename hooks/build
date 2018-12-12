@@ -1,4 +1,4 @@
 #!/bin/sh
-$VER=`curl -sA - https://www.docker.elastic.co/# | grep "docker pull docker.elastic.co/logstash/logstash-<strong>oss</strong>" | awk '{print $6}' | cut -d':' -f2- | cut -f1 -d"<" | sort -nr | head -n1`
+VER=`curl -sA - https://www.docker.elastic.co/# | grep "docker pull docker.elastic.co/logstash/logstash-<strong>oss</strong>" | awk '{print $6}' | cut -d':' -f2- | cut -f1 -d"<" | sort -nr | head -n1`
 docker build --build-arg VERSION=$VER -t $DOCKER_REPO:$VER .
 docker build --build-arg VERSION=$VER -t $IMAGE_NAME .
