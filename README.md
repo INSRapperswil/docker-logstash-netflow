@@ -29,4 +29,7 @@ This Docker image runs `logstash -f /srv/logstash.conf` by default. Override thi
 Since there is no default value for the `netflow_definitions` provided by the [Netflow codec plugin](https://www.elastic.co/guide/en/logstash/current/plugins-codecs-netflow.html), I added a default `netflow_definitions` configuration file inside this Docker image (from [logstash-plugins/logstash-codec-netflow](https://raw.githubusercontent.com/logstash-plugins/logstash-codec-netflow/master/lib/logstash/codecs/netflow/netflow.yaml)). To change this configuration simply "override" the definition by mounting a Docker volume at the same destination path. To achive this, use `-v /your/path/your_netflow.yaml:/srv/netflow.yaml`.
 
 ## Docker Hub Build
-This Docker Hub build is improved by using the tags from the official docker.elastic.co Docker registry. See https://github.com/docker/hub-feedback/issues/508 for more information.
+This Docker Hub build is improved by always using the latest tag from the official [docker.elastic.co](https://www.docker.elastic.co/#) Docker registry. See the following links to get more information:
+- https://github.com/docker/hub-feedback/issues/508
+- https://docs.docker.com/docker-cloud/builds/advanced/#custom-build-phase-hooks
+- https://github.com/andyneff/highland_builder/blob/master/builder.py
