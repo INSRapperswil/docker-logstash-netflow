@@ -1,4 +1,4 @@
 .git
-.keep
 README.md
 logstash.conf
+netflow.yaml
