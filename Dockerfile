@@ -2,7 +2,7 @@
 ARG VERSION=6.5.3
 FROM docker.elastic.co/logstash/logstash-oss:$VERSION
 
-LABEL maintainer="Philip Schmid <docker@ins.hsr.ch>"
+LABEL maintainer="Philip Schmid (@PhilipSchmid)"
 
 ENV DEBIAN_FRONTEND noninteractive
 
