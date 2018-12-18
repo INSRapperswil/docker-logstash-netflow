@@ -16,7 +16,8 @@ docker run -it \
 -p 9995:9995/udp \
 -v /opt/netflow-data:/data \
 -v `pwd`/logstash.conf:/srv/logstash.conf \
-pschmid/docker-logstash-netflow:latest
+pschmid/docker-logstash-netflow:latest \
+logstash -f /srv/logstash.conf
 ```
 
 ## Customization

@@ -15,5 +15,3 @@ RUN /usr/share/logstash/bin/logstash-plugin install --no-verify logstash-codec-n
 
 # Drop permissions
 USER logstash
-
-CMD ["logstash", "-f", "/srv/logstash.conf"]
