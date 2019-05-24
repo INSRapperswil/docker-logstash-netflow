@@ -1,5 +1,5 @@
 # If no build-arg "VERSION" is provided, use the default version "6.5.3"
-ARG VERSION=6.5.3
+ARG VERSION=7.1.0
 FROM docker.elastic.co/logstash/logstash-oss:$VERSION
 
 LABEL maintainer="Philip Schmid (@PhilipSchmid)"
