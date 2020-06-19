@@ -1,8 +1,10 @@
 # Dockerized Logstash with installed Netflow Plugin
 
+Pre-build image can be found here: https://hub.docker.com/r/hsrnetwork/dnsdist
+
 This Docker image can be used to collect Netflow data using Logstash. In the default configuration of this image, you will be able to store Netflow entries in JSON files. Additionally it prints the received flows to STDOUT (needs to be enabled first). Further Netflow processing logic can be easily configured inside the `logstash.conf` configuration.
 
-Pull the image directly from [pschmid/docker-logstash-netflow](https://hub.docker.com/r/pschmid/docker-logstash-netflow/) using the desired version or simply use the `latest` tag.
+Pull the image directly from [hsrnetwork/docker-logstash-netflow](https://hub.docker.com/r/hsrnetwork/docker-logstash-netflow) using the desired version or simply use the `latest` tag.
 
 ## Prerequisites
 - Create a data directory which will be mounted to the Docker container and will be used to store the Netflow data dump file. By default this image uses the host directory `/opt/netflow-data` which will be mounted at `/data` inside the container.
@@ -12,11 +14,11 @@ Pull the image directly from [pschmid/docker-logstash-netflow](https://hub.docke
 To start the conainer use:
 ```bash
 docker run -it \
--e "TZ=Europe/Zurich" \
--p 9995:9995/udp \
--v /opt/netflow-data:/data \
--v `pwd`/logstash.conf:/srv/logstash.conf \
-pschmid/docker-logstash-netflow:latest
+  -e "TZ=Europe/Zurich" \
+  -p 9995:9995/udp \
+  -v /opt/netflow-data:/data \
+  -v `pwd`/logstash.conf:/srv/logstash.conf \
+  hsrnetwork/docker-logstash-netflow:latest
 ```
 
 ## Customization
