@@ -1,6 +1,6 @@
 # Dockerized Logstash with installed Netflow Plugin
 
-Pre-build image can be found here: https://hub.docker.com/r/hsrnetwork/dnsdist
+Pre-build image can be found here: https://hub.docker.com/r/hsrnetwork/docker-logstash-netflow
 
 This Docker image can be used to collect Netflow data using Logstash. In the default configuration of this image, you will be able to store Netflow entries in JSON files. Additionally it prints the received flows to STDOUT (needs to be enabled first). Further Netflow processing logic can be easily configured inside the `logstash.conf` configuration.
 
